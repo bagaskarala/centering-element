@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    >
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Centering Element</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            padding: 0;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .parent {
+            border: 2px solid black;
+            background-color: oldlace;
+            width: 200px;
+            height: 200px;
+        }
+
+        .element {
+            background-color: greenyellow;
+            text-align: center;
+        }
+
+        /* grid */
+        #solution-grid .parent {
+            display: grid;
+        }
+
+        #solution-grid .element {
+            margin: auto
+        }
+
+        /* transform */
+        #solution-transform .parent {
+            position: relative;
+        }
+
+        #solution-transform .element {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* flex */
+        #solution-flex .parent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* table */
+        #solution-table .parent {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        #solution-table .element {
+            margin: auto
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Centering element using some techniques</h1>
+    <div class="container">
+        <div id="solution-grid">
+            <div class="parent">
+                <div class="element">grid</div>
+            </div>
+        </div>
+        <div id="solution-transform">
+            <div class="parent">
+                <div class="element">transform</div>
+            </div>
+        </div>
+        <div id="solution-flex">
+            <div class="parent">
+                <div class="element">flex</div>
+            </div>
+        </div>
+        <div id="solution-table">
+            <div class="parent">
+                <div class="element">table</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
